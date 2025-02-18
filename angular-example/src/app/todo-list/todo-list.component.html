@@ -1,0 +1,34 @@
+@let desc = "Uma descrição bem legal";
+@let nextElement = current.currentItem + ' (Pressione Enter ou Clique no botão!)';
+
+<h1>{{'title' | translate: language}}</h1>
+<div>
+    <h2>{{desc}}</h2>
+</div>
+
+<ul>
+    @for (item of items; track item) 
+    {
+        <li>{{item}}</li>
+    }
+
+    @if (current.currentItem !== "") 
+    {
+        <li>{{nextElement}}</li>
+    }
+
+    @if (items.length == 0) 
+    {
+        <li>A lista está vazia :(</li>
+    }
+</ul>
+
+<!-- 
+   * Aqui temos o "Translate", mandamos o primeiro parâmetro (É o que ele vai traduzir) e depois passamos a função com a língua que foi definida no component 
+-->
+   
+<add-item 
+    [placeholder]="'placeholder' | translate: language" 
+    (onSendInput)="receiveNewItem($event)"
+    #current
+/>

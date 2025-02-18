@@ -1,0 +1,13 @@
+<!-- <todo-list/> -->
+
+<list
+    #list
+    [crrPage]="pag.crrPage"
+/>
+
+<pag
+    #pag
+    [maxPagesInput] = "list.maxPages"
+/>
+
+<router-outlet />

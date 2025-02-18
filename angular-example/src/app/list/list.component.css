@@ -1,0 +1,34 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.19);
+    
+}
+
+.hr {
+    width: 50%;
+    display: flex;
+}
+
+ul {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+    right: 18px;
+    list-style-type: circle;
+    font-size: 18px;
+}

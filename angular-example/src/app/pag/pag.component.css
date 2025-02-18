@@ -1,0 +1,30 @@
+.buttons-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-opt {
+    width: 50px;
+    height: 25px;
+    background-color: rgb(167, 106, 224);
+    border-radius: 8px;
+}
+
+.pag {
+    margin: 25px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    display: flex;
+    padding: 20px 0px 15px 50px;
+    width: 20%;
+    border: none;
+    border-bottom: 2px solid purple;
+}

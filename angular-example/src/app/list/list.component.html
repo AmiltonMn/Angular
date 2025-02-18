@@ -1,0 +1,18 @@
+
+<div class="page">
+    <div class="list">
+        <h1 style="text-shadow: 2px 2px 3px rgb(95, 88, 89);">
+            {{title}}
+        </h1>
+    
+        <ul class="ul">
+            @for (item of itemsToShow; track item) 
+            {
+                <li style="color: white;">{{item}}</li>
+                <hr class="hr" color="black">
+            }
+        </ul>
+    
+        <p>Quantidade de itens na lista: {{items.length}}</p>
+    </div>
+</div>

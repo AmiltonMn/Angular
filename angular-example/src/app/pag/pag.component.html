@@ -1,0 +1,14 @@
+<div class="page">
+    <div class="buttons-div">
+        <button class="page-opt" (click)="backPage($event)"><</button>
+        <input type="text" placeholder="{{crrPage}} / {{maxPages}}  " class="pag"/>
+        <button class="page-opt" (click)="nextPage($event)">></button>
+    </div>
+    
+    @if (crrPage === 0 || crrPage >= maxPages) {
+        <div style="display: flex; gap: 5px;">
+            <p style="color: red; font-weight: bold;">Alert: </p>
+            <p> {{message}}</p>
+        </div>
+    }        
+</div>
