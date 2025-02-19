@@ -1,1 +1,21 @@
-<p>add-product-page works!</p>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+
+    <p>
+        <label for="title">Title:</label>
+        <input type="text" formControlName="title">
+    </p>
+
+    <p>
+        <label for="description">Description:</label>
+        <input type="text" formControlName="description">
+    </p>
+
+    <p>
+        <label for="price">Price:</label>
+        <input type="number" formControlName="price">
+    </p>
+
+    <!-- ? Caso algo no productForm esteja errado, ele desabilita o botão usando o [disabled] -->
+    <button type="submit" [disabled]="productForm.invalid">Add</button>
+
+</form>

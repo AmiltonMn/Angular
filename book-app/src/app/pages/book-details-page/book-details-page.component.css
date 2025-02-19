@@ -1,0 +1,15 @@
+.main-container {
+    overflow: hidden;
+    position: absolute;
+
+    display: flex;
+    margin-left: 20vw;
+    margin-top: 20vh;
+    height: 60vh;
+    width: 60vw;
+}
+
+.card {
+    width: 100%;
+    height: fit-content;
+}
