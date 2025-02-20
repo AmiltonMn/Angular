@@ -1,1 +1,19 @@
-@for (book of books; track $index) {}
+<div class="main-container">
+    @for (item of (books | async)?.books; track $index)
+    {
+        <book-item [book]='item'>
+    
+        </book-item>
+    }
+</div>
+
+<mat-paginator class="paginator"
+    [length]="( books | async )?.total" 
+    [pageSizeOptions]="[6, 12, 24, 48]" 
+    pageSize="{{maxItems}}"
+    pageIndex=""
+    aria-label="Select page"
+    (page)="changePage($event)"
+    #Pag
+>
+</mat-paginator>

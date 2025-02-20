@@ -1,0 +1,54 @@
+.card {
+    padding: 15px;
+    margin: 10px;
+    width: 600px;
+    height: 248px;
+    border-radius: 0px;
+    border: solid 1px black;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.book-image {
+    display: flex;
+    position: relative;
+    justify-self: start;
+    border-radius: 8px;
+    bottom: 31px;
+    right: 31px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 80%;
+}
+
+.main-info {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.author {
+    font-size: 16px;
+    margin-left: 5px;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}

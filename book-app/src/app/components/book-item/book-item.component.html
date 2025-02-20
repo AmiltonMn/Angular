@@ -1,18 +1,32 @@
 <mat-card class="card">
-    <mat-card-title>
-        {{book?.title}}
-    </mat-card-title>
-    <mat-card-subtitle>
-        {{book?.author}}
-    </mat-card-subtitle>
-
-    <mat-card-content>
-        <mat-list-item>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT58P55blSKZmf2_LdBoU7jETl6OiB2sjYy9A&s" alt="">
+    <mat-card-content class="content">
+        <mat-list-item class="book-image">
+            <img height="246px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT58P55blSKZmf2_LdBoU7jETl6OiB2sjYy9A&s" alt="">
         </mat-list-item>
 
-        <mat-list-item>
-            Nota: {{book?.avaliation}}
-        </mat-list-item>
+        <div class="book-info">
+            
+            <div class="main-info">
+                <mat-list-item class="title">
+                    <a [href]="'/book/' + book?.id" >{{book?.title}}</a>
+                </mat-list-item>
+    
+                <mat-list-item class="author">
+                    <p>{{book?.author}}</p>
+                </mat-list-item>
+
+                <mat-list-item>
+                    <p>R${{book?.price}}</p>
+                </mat-list-item>
+                
+            </div>
+
+            <div>
+                <mat-list-item>
+                    <app-stars nota="{{book?.avaliation}}"></app-stars>
+                </mat-list-item>
+            </div>
+        </div>
+
     </mat-card-content>
 </mat-card>

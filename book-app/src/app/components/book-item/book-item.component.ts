@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { Book } from '../../models/book';
+import { StarsComponent } from "../stars/stars.component";
 
 @Component({
-  selector: 'app-book-item',
-  imports: [ MatCardModule, MatListModule ],
+  selector: 'book-item',
+  imports: [MatCardModule, MatListModule, StarsComponent],
   templateUrl: './book-item.component.html',
   styleUrl: './book-item.component.css'
 })
 export class BookItemComponent {
-  book: Book | undefined;
 
-
+  @Input()
+  book: Book | undefined
 }
